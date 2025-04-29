@@ -1,0 +1,195 @@
+/* -----------------------------------------------------
+ * General
+ * ----------------------------------------------------- */
+@import '../../.cache/wal/colors-waybar.css';
+
+@define-color backgroundlight @color5;
+@define-color backgrounddark @color11;
+@define-color textcolor1 #FFFFFF;
+@define-color iconcolor #FFFFFF;
+
+
+* {
+    font-family: "Fira Sans Semibold", "Font Awesome 6 Free", FontAwesome,  Roboto, Helvetica, Arial, sans-serif;
+    border: none;
+    border-radius: 0px;
+    font-size: 15px;
+}
+
+window#waybar {
+    background-color: rgba(0,0,0,0);
+    border-bottom: 0px solid #ffffff;
+    background: transparent;
+    transition-property: background-color;
+}
+
+/* -----------------------------------------------------
+ * Workspaces
+ * ----------------------------------------------------- */
+#workspaces {
+    margin: 10px 5px 10px 0px;
+    padding: 0px 0px 0px 0px;
+    border-radius: 30px;
+    color: @textcolor1;
+    background-color: transparent;
+}
+
+#workspaces button {
+    background: @textcolor1;
+    padding: 0px 5px 0px 5px;
+    margin: 0px 5px 0px 0px;
+    border-radius: 30px;
+    color: @backgrounddark;
+    transition: all 0.3s ease-in-out;
+}
+
+#workspaces button.active {
+    color: @textcolor1;
+    padding: 0px 5px 0px 5px;
+    margin: 0px 5px 0px 0px;
+    background: @backgrounddark;
+    border-radius: 30px;
+    transition: all 0.3s ease-in-out;
+    border: 0px;
+}
+
+#workspaces button:hover {
+    color: @textcolor1;
+    padding: 0px 5px 0px 5px;
+    margin: 0px 5px 0px 0px;
+    background: @backgrounddark;
+    border-radius: 30px;
+}
+
+/* -----------------------------------------------------
+ * Tooltips
+ * ----------------------------------------------------- */
+tooltip {
+    border-radius: 10px;
+    background-color: @backgrounddark;
+    opacity:0.9;
+    padding:20px;
+    margin:0px;
+}
+
+tooltip label {
+    color: @textcolor1;
+}
+
+/* -----------------------------------------------------
+ * Modules
+ * ----------------------------------------------------- */
+.modules-left > widget:first-child > #workspaces {
+    margin-left: 10;
+}
+
+.modules-right > widget:last-child > #workspaces {
+    margin-right: 10;
+}
+
+/* -----------------------------------------------------
+ * Module Base Styling
+ * ----------------------------------------------------- */
+#window,
+#custom-notification,
+#custom-tools,
+#custom-system,
+#custom-exit,
+#custom-updates,
+#clock,
+#pulseaudio,
+#network,
+#bluetooth,
+#custom-keybindings,
+#custom-wallpaper,
+#custom-brightness,
+#custom-arch,
+#memory,
+#disk,
+#cpu {
+    border-radius: 10px;
+    margin: 10px 10px 10px 0px;
+    padding: 0px 10px;
+}
+
+#custom-arch {
+  font-family: "Symbols Nerd Font";
+}
+/* -----------------------------------------------------
+ * Text + Icon Modules
+ * ----------------------------------------------------- */
+#memory,
+#disk,
+#cpu,
+#network,
+#pulseaudio,
+#clock,
+#custom-updates {
+    padding: 2px 10px 0px 10px;
+}
+
+/* -----------------------------------------------------
+ * Dark Background Modules
+ * ----------------------------------------------------- */
+#window,
+#custom-notification,
+#custom-tools,
+#custom-system,
+#custom-exit,
+#custom-updates,
+#clock,
+#pulseaudio,
+#network,
+#disk,
+#memory,
+#cpu,
+#custom-arch,
+#bluetooth,
+#tray {
+    background-color: @backgrounddark;
+    color: @textcolor1;
+}
+
+/* -----------------------------------------------------
+ * Light Background Modules
+ * ----------------------------------------------------- */
+#custom-keybindings,
+#custom-wallpaper,
+#custom-brightness {
+    background-color: #FFFFFF;
+    color: @backgrounddark;
+}
+
+/* -----------------------------------------------------
+ * Window States
+ * ----------------------------------------------------- */
+window#waybar.empty #window {
+    background-color: transparent;
+}
+
+/* -----------------------------------------------------
+ * Bluetooth States
+ * ----------------------------------------------------- */
+#bluetooth.off {
+    background-color: transparent;
+    padding: 0px;
+    margin: 0px;
+}
+
+/* -----------------------------------------------------
+ * Tray Items
+ * ----------------------------------------------------- */
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: #eb4d4b;
+}
+
+#tray {
+    border-radius: 10px;
+    margin: 10px 10px 10px 0px;
+    padding: 0px 5px 0px 10px;
+}

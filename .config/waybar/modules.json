@@ -1,0 +1,247 @@
+{
+  //Arch BTW
+    "custom/arch": {
+        "format": "",
+        "on-click": "pkill rofi || rofi -show drun -replace -i",
+        "tooltip": true,
+        "tooltip-format": "btw"
+    },
+
+  // Workspaces
+  "hyprland/workspaces": {
+    "on-scroll-up": "hyprctl dispatch workspace r-1",
+    "on-scroll-down": "hyprctl dispatch workspace r+1",
+    "on-click": "activate",
+    "active-only": false,
+    "all-outputs": true,
+  	"format": "{icon}",
+        "format-icons": {
+            "1": "I",
+            "2": "II",
+            "3": "III",
+            "4": "IV",
+            "5": "V",
+            "6": "VI",
+            "7": "VII",
+            "8": "VIII",
+            "9": "IX",
+            "10": "X",
+            "11": "XI",
+            "12": "XII",
+            "13": "XIII",
+            "14": "XIV",
+            "15": "XV",
+            "16": "XVII",
+            "17": "XVI",
+            "18": "XVIII",
+            "19": "XIX",
+            "20": "XX",
+            "urgent": "",
+            "focused": ""
+    }
+  },
+
+  // Window
+  "hyprland/window": {
+    "format": "{}",
+    "max-length": 50,
+    "rewrite": {
+       "(.*) — Mozilla Firefox": "󰈹  $1",
+       "(.*) - Nvim": "  $1"
+    },
+    "tooltip": false
+  },
+
+  // Wallpaper
+  "custom/wallpaper": {
+    "format": "",
+    "on-click": "waypaper",
+    "tooltip": true,
+    "tooltip-format": "Set wallpaper"
+  },
+
+  // Updates Count
+  "custom/updates": {
+    "format": " {}",
+    "escape": true,
+    "return-type": "json",
+    "exec": "~/.config/hypr/scripts/updates.sh",
+    "interval": 1800,
+    "on-click": "kitty --class dotfiles-floating -e ~/.config/hypr/scripts/installupdates.sh"
+  },
+
+  // Keybindings
+  "custom/keybindings": {
+    "format": "",
+    "on-click": "~/.config/hypr/scripts/keybindings.sh",
+    "tooltip": true,
+    "tooltip-format": "Keybindings"
+  },
+
+  // Power Menu
+  "custom/exit": {
+    "format": "",
+    "on-click": "wlogout -b 5 -m 400",
+    "on-click-right": "hyprlock",
+    "tooltip-format": "Left: Power menu\nRight: Lock screen"
+  },
+
+  // System tray
+  "tray": {
+    "icon-size": 21,
+    "spacing": 5
+  },
+
+  // Clock
+  "clock": {
+    "format": " {:%H:%M   %a %B %d}",
+        "tooltip-format": "<tt><big>{calendar}</big></tt>",
+        "calendar": {
+                    "mode"          : "month",
+                    "mode-mon-col"  : 3,
+                    "weeks-pos"     : "right",
+                    "on-scroll"     : 1,
+                    "format": {
+                              "months":     "<span color='#ffead3'><b>{}</b></span>",
+                              "days":       "<span color='#ecc6d9'><b>{}</b></span>",
+                              "weeks":      "<span color='#99ffdd'><b>W{}</b></span>",
+                              "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
+                              "today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
+                              }
+                    },
+  },
+
+  // CPU
+  "cpu": {
+    "format": " {usage}%",
+    "on-click": "kitty --class dotfiles-floating -e htop"
+  },
+
+  // Memory
+  "memory": {
+    "format": " {}%",
+    "on-click": "kitty --class dotfiles-floating -e htop"
+  },
+
+  // Harddisc space used
+  "disk": {
+    "interval": 30,
+    "format": " {percentage_used}%",
+    "path": "/",
+    "on-click": "kitty --class dotfiles-floating -e bash -c 'df -h; echo; echo \"Press any key to close\"; read -n 1'"
+  },
+
+  // Group Tools
+  "group/tools": {
+    "orientation": "inherit",
+    "drawer": {
+      "transition-duration": 100,
+      "children-class": "not-memory",
+      "transition-left-to-right": false
+    },
+    "modules": [
+      "custom/tools",
+      "custom/wallpaper",
+      "custom/brightness",
+      "custom/keybindings"
+    ]
+  },
+
+  // Network
+  "network": {
+    "format": "{ifname}",
+    "format-wifi": "   {signalStrength}%",
+    "format-ethernet": "  {ifname}",
+    "format-disconnected": "Not connected", 
+    "tooltip-format": " {ifname} via {gwaddri}",
+    "tooltip-format-wifi": "   {essid} ({signalStrength}%)",
+    "tooltip-format-ethernet": "  {ifname} ({ipaddr}/{cidr})",
+    "tooltip-format-disconnected": "Disconnected",
+    "max-length": 50,
+    "on-click": "kitty --class dotfiles-floating -e nmtui"
+  },
+
+  // Pulseaudio
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-bluetooth": "{volume}%  {icon} {format_source}",
+    "format-bluetooth-muted": "  {icon} {format_source}",
+    "format-muted": "  {format_source}",
+    "format-source": "{volume}% ",
+    "format-source-muted": "",
+    "format-icons": {
+      "headphone": "",
+      "hands-free": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": [
+        "",
+        " ",
+        " "
+      ]
+    },
+    "on-click": "pavucontrol"
+  },
+
+  // SwayNC
+  "custom/notification": {
+    "tooltip-format": "Left: Notifications\nRight: Do not disturb",
+    "format": "{icon}",
+    "format-icons": {
+      "notification":
+        "<span rise='8pt'><span foreground='red'><sup></sup></span></span>",
+      "none": "",
+      "dnd-notification":
+        "<span rise='8pt'><span foreground='red'><sup></sup></span></span>",
+      "dnd-none": "",
+      "inhibited-notification":
+        "<span rise='8pt'><span foreground='red'><sup></sup></span></span>",
+      "inhibited-none": "",
+      "dnd-inhibited-notification":
+        "<span rise='8pt'><span foreground='red'><sup></sup></span></span>",
+      "dnd-inhibited-none": ""
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "escape": true
+  },
+
+  // Bluetooth
+  "bluetooth": {
+    "format-disabled": "",
+    "format-off": "",
+    "interval": 30,
+    "on-click": "blueman-manager",
+    "format-no-controller": ""
+  },
+
+  // backlight:
+  "custom/brightness": {
+    "exec": "ddcutil -b 3 getvcp 10 -t | perl -nE 'if (/ C (\\d+) /) { say $1; }' && ddcutil -b 4 getvcp 10 -t | perl -nE 'if (/ C (\\d+) /) { say $1; }'",
+    "exec-if": "sleep 1",
+    "format": "",
+    "interval": "once",
+    "tooltip": true,
+    "tooltip-format": "Brightness",
+    "on-scroll-up": "ddcutil -b 3 setvcp 10 + 10 && ddcutil -b 4 setvcp 10 + 10",
+    "on-scroll-down": "ddcutil -b 3 setvcp 10 - 10 && ddcutil -b 4 setvcp 10 - 10"
+  },
+
+  // Other
+  "user": {
+    "format": "{user}",
+    "interval": 60,
+    "icon": false
+  },
+
+  // Tools
+  "custom/tools": {
+    "format": "",
+    "tooltip-format": "Tools"
+  }
+}
