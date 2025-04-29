@@ -18,5 +18,14 @@ The dotfiles include configurations for the following tools:
 - **Waypaper**: Wallpaper manager
 - **Neovim**: Text editor (Note: My Neovim configuration is hosted separately at [lazyvim-config](https://github.com/CLBRITTON2/lazyvim-config))
 
+### Screenshots
+![image](https://github.com/user-attachments/assets/60807072-96a0-4bd9-9c49-f57e33a8351e)
+![image](https://github.com/user-attachments/assets/47028174-2e0b-42a2-8dc6-6d2d43ce191f)
+
+
+
+
+
+
 ## Credits
-This setup started as a [ML4W Dotfiles](https://github.com/mylinuxforwork/dotfiles) install that I've manually uninstalled and written over time.
+This setup started as a [ML4W Dotfiles](https://github.com/mylinuxforwork/dotfiles) install that I've been rewriting.
