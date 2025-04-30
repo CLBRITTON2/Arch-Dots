@@ -6,9 +6,9 @@
   "control-center-layer": "top",
   "layer-shell": true,
   "cssPriority": "user",
-  "control-center-margin-top": 13,
+  "control-center-margin-top": 0,
   "control-center-margin-bottom": 0,
-  "control-center-margin-right": 14,
+  "control-center-margin-right": 60,
   "control-center-margin-left": 0,
   "notification-2fa-action": true,
   "notification-inline-replies": false,
@@ -33,7 +33,6 @@
     "buttons-grid",
     "mpris",
     "volume",
-    "backlight",
     "title",
     "notifications"
   ],
@@ -56,9 +55,6 @@
     },
     "volume": {
       "label": "󰕾"
-    },
-    "backlight": {
-      "label": "󰃟"
     },
     "buttons-grid": {
       "actions": [

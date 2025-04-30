@@ -68,12 +68,12 @@ tooltip {
     border-radius: 10px;
     background-color: @backgrounddark;
     opacity:0.9;
-    padding:20px;
-    margin:0px;
 }
 
 tooltip label {
     color: @textcolor1;
+    padding:0px;
+    margin:0px;
 }
 
 /* -----------------------------------------------------
