@@ -8,7 +8,6 @@ These dotfiles are symlinked to my `~/.config` folder. There's no install script
 ### Included Configurations
 The dotfiles include configurations for the following tools:
 - **Hyprland**: Window manager
-- **Dunst**: Notification daemon
 - **Hypridle**: Idle management
 - **Hyprlock**: Screen lock
 - **Kitty**: Terminal emulator
@@ -16,6 +15,7 @@ The dotfiles include configurations for the following tools:
 - **Swaync**: Notification center
 - **Waybar**: Status bar
 - **Waypaper**: Wallpaper manager
+- **Pywal**: Color generation for themes
 - **Neovim**: Text editor (Note: My Neovim configuration is hosted separately at [lazyvim-config](https://github.com/CLBRITTON2/lazyvim-config))
 
 ### Screenshots
