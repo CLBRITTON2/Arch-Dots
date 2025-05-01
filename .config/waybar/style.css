@@ -100,7 +100,6 @@ tooltip label {
 #pulseaudio,
 #network,
 #bluetooth,
-#custom-keybindings,
 #custom-wallpaper,
 #custom-brightness,
 #custom-arch,
@@ -153,7 +152,6 @@ tooltip label {
 /* -----------------------------------------------------
  * Light Background Modules
  * ----------------------------------------------------- */
-#custom-keybindings,
 #custom-wallpaper,
 #custom-brightness {
     background-color: #FFFFFF;

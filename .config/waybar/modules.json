@@ -70,14 +70,6 @@
     "on-click": "kitty --class dotfiles-floating -e ~/.config/hypr/scripts/installupdates.sh"
   },
 
-  // Keybindings
-  "custom/keybindings": {
-    "format": "",
-    "on-click": "~/.config/hypr/scripts/keybindings.sh",
-    "tooltip": true,
-    "tooltip-format": "Keybindings"
-  },
-
   // Power Menu
   "custom/exit": {
     "format": "",
