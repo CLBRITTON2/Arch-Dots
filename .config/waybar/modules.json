@@ -106,13 +106,13 @@
   // CPU
   "cpu": {
     "format": " {usage}%",
-    "on-click": "kitty --class dotfiles-floating -e htop"
+    "on-click": "kitty --class btop-floating -e btop"
   },
 
   // Memory
   "memory": {
     "format": " {}%",
-    "on-click": "kitty --class dotfiles-floating -e htop"
+    "on-click": "kitty --class btop-floating -e btop"
   },
 
   // Harddisc space used
