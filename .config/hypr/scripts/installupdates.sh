@@ -1,42 +1,27 @@
 #!/bin/bash
-aur_helper="yay"
-echo
-
-# ------------------------------------------------------
-# Start Update
-# ------------------------------------------------------
 echo ":: Update started."
-_isInstalled() {
-  package="$1"
-  check="$($aur_helper -Qs --color always "${package}" | grep "local" | grep "${package} ")"
-  if [ -n "${check}" ]; then
-    echo 0 #'0' means 'true' in Bash
-    return #true
-  fi
-  echo 1 #'1' means 'false' in Bash
-  return #false
-}
 
 # System update and cleanup
-sudo pacman -Syyu
+sudo pacman -Syu
+
 echo ":: Cleaning package cache..."
-sudo pacman -Scc
+sudo pacman -Scc --noconfirm
+
 echo ":: Removing orphaned packages..."
-if [[ -n "$(pacman -Qdtq)" ]]; then
-  sudo pacman -Rns $(pacman -Qdtq)
+orphans=$(pacman -Qdtq)
+if [[ -n "$orphans" ]]; then
+  sudo pacman -Rns "$orphans"
 else
   echo "No orphaned packages found."
 fi
-echo ":: System cleanup complete!"
 
 # Run AUR helper
-$aur_helper
+echo ":: Updating AUR packages..."
+yay
 
-# Flatpak update (if installed)
-if [[ $(_isInstalled "flatpak") == "0" ]]; then
-  flatpak upgrade
-fi
+# Flatpak update
+echo ":: Updating Flatpak packages..."
+flatpak upgrade
 
-notify-send "Update complete"
-echo
+notify-send "System update complete"
 echo ":: Update complete"
