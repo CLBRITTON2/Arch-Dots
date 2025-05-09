@@ -102,7 +102,6 @@ tooltip label {
 #bluetooth,
 #custom-wallpaper,
 #custom-brightness,
-#custom-arch,
 #memory,
 #disk,
 #cpu {
@@ -111,9 +110,6 @@ tooltip label {
     padding: 0px 10px;
 }
 
-#custom-arch {
-  font-family: "Symbols Nerd Font";
-}
 /* -----------------------------------------------------
  * Text + Icon Modules
  * ----------------------------------------------------- */
@@ -142,7 +138,6 @@ tooltip label {
 #disk,
 #memory,
 #cpu,
-#custom-arch,
 #bluetooth,
 #tray {
     background-color: @backgrounddark;

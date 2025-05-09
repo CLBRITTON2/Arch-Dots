@@ -16,8 +16,7 @@
     "hyprland/workspaces",
     "disk",
     "cpu",
-    "memory",
-    "custom/arch"
+    "memory"
   ],
 
   // Modules Center
