@@ -25,21 +25,8 @@ PROMPT="┌[%T]-[%n]-[%~]
 └─> "
 
 precmd() {
- print ""
   # Set terminal title to "kitty [current directory]"
   print -Pn "\e]0;  %~\a"
-}
-# Add an empty line before prompt, but only after commands
-function precmd() {
-  if [ -z "$_FIRST_PROMPT" ]; then
-    # First prompt when terminal starts - don't add space
-    export _FIRST_PROMPT=false
-    print -Pn "\e]0;  %~\a"
-  else
-    # Add space after command output
-    print ""
-    print -Pn "\e]0;  %~\a"
-  fi
 }
 
 preexec() {
