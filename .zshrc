@@ -46,6 +46,7 @@ alias shutdown='systemctl poweroff'
 alias v='$EDITOR'
 alias vim='$EDITOR'
 alias wifi='nmtui'
+alias wfile="~/.config/utility/wfile.sh"
 
 # -----------------------------------------------------
 # Navigation Shortcuts
