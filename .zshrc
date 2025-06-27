@@ -44,9 +44,8 @@ alias ll='eza -al --icons=always'
 alias lt='eza -a --tree --level=1 --icons=always'
 alias shutdown='systemctl poweroff'
 alias v='$EDITOR'
-alias vim='$EDITOR'
 alias wifi='nmtui'
-alias wfile="~/.config/utility/wfile.sh"
+alias wf="~/.config/utility/wfile.sh"
 
 # -----------------------------------------------------
 # Navigation Shortcuts
