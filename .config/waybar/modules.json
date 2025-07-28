@@ -8,11 +8,11 @@
     "all-outputs": true,
   	"format": "{icon}",
         "format-icons": {
-            "1": "",
-            "2": "",
-            "3": "",
-            "4": "",
-            "5": "",
+            "1": "1",
+            "2": "2",
+            "3": "3",
+            "4": "4",
+            "5": "5",
             "6": "6",
             "7": "7",
             "8": "8",
@@ -54,7 +54,7 @@
 
   // Updates Count
   "custom/updates": {
-    "format": " {}",
+    "format": "  {}",
     "escape": true,
     "return-type": "json",
     "exec": "~/.config/hypr/scripts/updates.sh",
@@ -64,7 +64,7 @@
 
   // Power Menu
   "custom/exit": {
-    "format": "",
+    "format": "",
     "on-click": "wlogout -b 5 -m 400",
     "on-click-right": "hyprlock",
     "tooltip-format": "Left: Power menu\nRight: Lock screen"
@@ -97,7 +97,7 @@
 
   // CPU
   "cpu": {
-    "format": " {usage}%",
+    "format": "  {usage}%",
     "on-click": "kitty --class btop-floating -e btop"
   },
 
@@ -136,7 +136,7 @@
   "network": {
     "format": "{ifname}",
     "format-wifi": "   {signalStrength}%",
-    "format-ethernet": "  {ifname}",
+    "format-ethernet": " {ifname}",
     "format-disconnected": "Not connected", 
     "tooltip-format": " {ifname} via {gwaddri}",
     "tooltip-format-wifi": "   {essid} ({signalStrength}%)",
@@ -148,7 +148,7 @@
 
   // Pulseaudio
   "pulseaudio": {
-    "format": "{icon} {volume}%",
+    "format": "{icon}  {volume}%",
     "format-bluetooth": "{volume}%  {icon} {format_source}",
     "format-bluetooth-muted": "  {icon} {format_source}",
     "format-muted": "  {format_source}",
